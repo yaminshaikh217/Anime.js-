@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="boxes"></div>
+
+
+
+    <script src="anime.js"></script>
+    <script>
+        let box = document.querySelector(".boxes");
+
+
+        for (let i = 0; i < 45; i++) {
+            let sbox = document.createElement("div");
+            sbox.classList.add("sbox");
+            box.appendChild(sbox)
+
+        }
+
+        anime({
+            targets: ".sbox",
+            scale: [
+                { value: 0.1, duration: 500, easing: "easeOutSine" },
+                { value: 1, duration: 700, easing: "easeInQuad" }
+
+            ],
+            // filter: ['hue-rotate(0deg)', 'hue-rotate(180deg)'],
+            delay: anime.stagger(250, { grid: [9, 5], from: "center" }),
+            loop: true
+        })
+
+    </script>
+</body>
+
+</html>

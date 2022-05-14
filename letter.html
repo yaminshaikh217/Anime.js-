@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h1 class="txt">YAMIN SHAIKH</h1>
+    </div>
+
+    <script src="anime.js"></script>
+    <script>
+        let letter = document.querySelector(".txt")
+        letter.innerHTML = letter.textContent.replace(/\S/g, "<span>$&</span>")
+
+        anime.timeline({
+            loop: true
+        })
+
+            .add({
+                targets: ".txt span",
+                translateY: [-600, 0],
+                scale: [10, 1],
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1500,
+                delay: anime.stagger(100),
+            })
+
+            .add({
+                targets: ".txt span",
+                translateX: [0, -1000],
+                scale: [1, 1],
+                opacity: [1, 0],
+                easing: "easeOutExpo",
+                duration: 1500,
+                delay: anime.stagger(100),
+            })
+
+            .add({
+                targets: ".txt span",
+                translateX: [1000, 0],
+                scale: [1, 1],
+                opacity: [0, 1],
+                easing: "easeOutExpo",
+                duration: 1500,
+                delay: anime.stagger(100),
+            })
+
+            .add({
+                targets: ".txt span",
+                translateY: [0, 0],
+                scale: [1, 30],
+                opacity: [1, 0],
+                easing: "easeOutExpo",
+                duration: 1500,
+                delay: anime.stagger(100),
+            })
+
+
+
+    </script>
+
+</body>
+
+</html>
