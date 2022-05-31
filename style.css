@@ -60,3 +60,19 @@ section.p {
 .para span {
     display: inline-block;
 }
+svg {
+    width: 20rem;
+}
+#signature {
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: sign 4s ease infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
